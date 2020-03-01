@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Platform, StyleSheet, Text, View,Button, TouchableOpacity,Image, ScrollView} from 'react-native';
+import {Platform, StyleSheet, Text, View,Button, TouchableOpacity,Image,SafeAreaView} from 'react-native';
 import ButtonComp from '../components/ButtonComp';
 import CardComp from '../components/CardComp';
 import MainCard from '../components/MainCard';
@@ -9,7 +9,7 @@ import MainCard from '../components/MainCard';
  function HomeScreen ({navigation}) {
   
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <View style={styles.topBar}>
             <Image source ={require('../assets/logo/dripz_logo_white.png')} style={styles.logoImg}/>
         </View> 
@@ -38,7 +38,7 @@ import MainCard from '../components/MainCard';
           />
 
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
   export default HomeScreen;
