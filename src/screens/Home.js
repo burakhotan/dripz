@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
+import * as React from 'react';
 import {Platform, StyleSheet, Text, View,Button, TouchableOpacity,Image, ScrollView} from 'react-native';
 import ButtonComp from '../components/ButtonComp';
 import CardComp from '../components/CardComp';
 import MainCard from '../components/MainCard';
 
- function HomeScreen () {
+
+
+ function HomeScreen ({navigation}) {
   
     return (
       <View style={styles.container}>
@@ -18,11 +20,15 @@ import MainCard from '../components/MainCard';
             mainSneakerImg={require('../assets/sneakerImages/jordan.jpg')}
             mainPriceText={'$180'}
           />
+          
         </View>
 
         <View style={styles.bottomBar}>
           <ButtonComp
           photo = {require('../assets/buttonImages/search.png')}
+          screen={'Search'}
+          navigation={navigation}
+          
           />
           <ButtonComp
           photo = {require('../assets/buttonImages/sneaker.png')}

@@ -3,15 +3,13 @@ import {StyleSheet, View, Text,TouchableOpacity,Image} from 'react-native';
 
 export default class ButtonComp extends Component {
   render() {
-    const {photo,navigation,screen}=this.props;
+    const {photo,screen,navigation}=this.props;
     return (
-      <View>
-       <TouchableOpacity>
+       <TouchableOpacity onPress={() => navigation.navigate(screen)}>
             <View style={styles.mButtonContainer}>
               <Image source ={photo} style={styles.button1}/>
             </View>
         </TouchableOpacity>
-      </View>
     );
   }
 }
@@ -27,4 +25,5 @@ const styles = StyleSheet.create ({
       }
 
 });
+
 
