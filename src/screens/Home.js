@@ -16,9 +16,9 @@ import MainCard from '../components/MainCard';
 
         <View style={styles.mainBoard}>
           <MainCard
-            mainCardText={'AİR JORDAN 1 HİGH OG " UNC TO CHİCAGO " BLACK / DK POWDER BLUE GYM RED'}
-            mainSneakerImg={require('../assets/sneakerImages/jordan.jpg')}
-            mainPriceText={'$180'}
+            mainCardText={'JORDAN 1 RETRO HIGH TRAVIS SCOTT'}
+            mainSneakerImg={require('../assets/sneakerImages/travis.jpg')}
+            mainPriceText={'$770'}
           />
           
         </View>
