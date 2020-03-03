@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity, TextInput } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
 import data from '../data/jordanData';
+import ModalScreen from './Modal';
 
 export default class SearchScreen extends Component {
+  
   state = {
     text: '',
     contacts: data
   };
 
-  renderContactsItem = ({ item, index }) => {
+  renderContactsItem = ({ item, index}) => {
     return (
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity 
+      style={styles.itemContainer}
+      onPress={() => this.props.navigation.navigate('Modal',{contacts:this.state.contacts})}
+      >
+        
         <Image
           style={styles.avatar}
           source={{ uri: item.picture }}
@@ -22,6 +28,9 @@ export default class SearchScreen extends Component {
       </TouchableOpacity>
     )
 
+  };
+  getValueContacts(){
+    return this.state.contacts;
   };
 
   searchFilter = (text) => {
