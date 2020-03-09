@@ -15,7 +15,7 @@ export default class SearchScreen extends Component {
     return (
       <TouchableOpacity 
       style={styles.itemContainer}
-      onPress={() => this.props.navigation.navigate('Modal',{contacts:this.state.contacts})}
+      onPress={() => this.props.navigation.navigate('Modal',{selectedItem:item},)}
       >
         
         <Image
@@ -29,10 +29,7 @@ export default class SearchScreen extends Component {
     )
 
   };
-  getValueContacts(){
-    return this.state.contacts;
-  };
-
+  
   searchFilter = (text) => {
     const newData = data.filter(item => {
       const listItem = `${item.sneakerName.toLowerCase()}`;
@@ -59,7 +56,7 @@ export default class SearchScreen extends Component {
               this.searchFilter(text);
             }}
             value={text}
-            placeholder='Search'
+            placeholder='Search by brand name, model, etc.'
             style={styles.searchInput}
           />
         </View>
@@ -85,6 +82,8 @@ export default class SearchScreen extends Component {
           />
           <ButtonComp
             photo={require('../assets/buttonImages/profile.png')}
+            screen={'Login'}
+            navigation={navigation}
           />
 
         </View>
@@ -96,7 +95,7 @@ export default class SearchScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F4F4F4'
+    backgroundColor: '#FFFFFF'
   },
   itemContainer: {
     flex: 1,
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
   searchBar: {
     flex: 0.07,
     padding: 10,
-    backgroundColor:'#F5F5F5',
+    backgroundColor:'#FFFFFF',
     borderWidth:0.7,
     borderColor:'#000000'
   },

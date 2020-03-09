@@ -32,9 +32,13 @@ import MainCard from '../components/MainCard';
           />
           <ButtonComp
           photo = {require('../assets/buttonImages/sneaker.png')}
+          screen={'Home'}
+          navigation={navigation}
           />
           <ButtonComp
           photo = {require('../assets/buttonImages/profile.png')}
+          screen={'Login'}
+          navigation={navigation}
           />
 
         </View>

@@ -6,7 +6,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 //screens
 import HomeScreen from './screens/Home';
 import SearchScreen from './screens/Search';
-import ModalScreen from './screens/Modal';    
+import ModalScreen from './screens/Modal';  
+import LoginScreen from './screens/Login';  
+
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,12 @@ const Stack = createStackNavigator();
             }}
             />
             <Stack.Screen name= "Modal" component={ModalScreen}
+            options={{
+                headerShown:false,
+                
+            }}
+            />
+            <Stack.Screen name= "Login" component={LoginScreen}
             options={{
                 headerShown:false
             }}
