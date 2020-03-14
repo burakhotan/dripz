@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text,StyleSheet,Image } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
 //screens
-import SearchScreen from './Search';
+
 export default class ModalScreen extends Component {
 
 

@@ -6,7 +6,7 @@ import MainCard from '../components/MainCard';
 
 
 
- function HomeScreen ({navigation}) {
+ function SneakersScreen ({navigation}) {
   
     return (
       <SafeAreaView style={styles.container}>
@@ -32,7 +32,7 @@ import MainCard from '../components/MainCard';
           />
           <ButtonComp
           photo = {require('../assets/buttonImages/sneaker.png')}
-          screen={'Home'}
+          screen={'Sneakers'}
           navigation={navigation}
           />
           <ButtonComp
@@ -45,7 +45,7 @@ import MainCard from '../components/MainCard';
       </SafeAreaView>
     );
   }
-  export default HomeScreen;
+  export default SneakersScreen;
 
 const styles = StyleSheet.create({ //STYLES
   container: {

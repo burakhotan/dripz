@@ -77,7 +77,7 @@ export default class SearchScreen extends Component {
           />
           <ButtonComp
             photo={require('../assets/buttonImages/sneaker.png')}
-            screen={'Home'}
+            screen={'Sneakers'}
             navigation={navigation}
           />
           <ButtonComp

@@ -4,20 +4,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 //screens
-import HomeScreen from './screens/Home';
+import SneakersScreen from './screens/Sneakers';
 import SearchScreen from './screens/Search';
 import ModalScreen from './screens/Modal';  
-import LoginScreen from './screens/Login';  
-
+import LoginScreen from './screens/Login';
+import MainScreen from './screens/Main';
+import ClothesScreen from './screens/Clothes';
 
 const Stack = createStackNavigator();
 
- function Router() {
+  function Router() {
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Main">
 
-            <Stack.Screen name= "Home" component={HomeScreen}
+            <Stack.Screen name= "Sneakers" component={SneakersScreen}
             options={{
                 headerShown:false
             }}
@@ -37,6 +38,19 @@ const Stack = createStackNavigator();
             options={{
                 headerShown:false
             }}
+            
+            />
+            <Stack.Screen name= "Main" component={MainScreen}
+            options={{
+                headerShown:false
+            }}
+            
+            />
+            <Stack.Screen name= "Clothes" component={ClothesScreen}
+            options={{
+                headerShown:false
+            }}
+            
             />
         </Stack.Navigator>
     </NavigationContainer>
