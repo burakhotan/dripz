@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity, TextInput } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
-import data from '../data/jordanData';
-import ModalScreen from './Modal';
+import data from '../data/offWhiteData';
+import ModalApparelScreen from './ModalApparel';
 
-export default class SearchScreen extends Component {
+export default class SearchApparelScreen extends Component {
   
   state = {
     text: '',
@@ -15,7 +15,7 @@ export default class SearchScreen extends Component {
     return (
       <TouchableOpacity 
       style={styles.itemContainer}
-      onPress={() => this.props.navigation.navigate('Modal',{selectedItem:item},)}
+      onPress={() => this.props.navigation.navigate('ModalApparel',{selectedItem:item},)}
       >
         
         <Image
@@ -23,7 +23,7 @@ export default class SearchScreen extends Component {
           source={{ uri: item.picture }}
         />
         <View style={styles.textContainer}>
-          <Text style={styles.name} >{item.sneakerName}</Text>
+          <Text style={styles.name} >{item.apparelName}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -32,7 +32,7 @@ export default class SearchScreen extends Component {
   
   searchFilter = (text) => {
     const newData = data.filter(item => {
-      const listItem = `${item.sneakerName.toLowerCase()}`;
+      const listItem = `${item.apparelName.toLowerCase()}`;
 
       return listItem.indexOf(text.toLowerCase()) > -1;
     });
@@ -71,13 +71,13 @@ export default class SearchScreen extends Component {
         <View style={styles.bottomBar}>
           <ButtonComp
             photo={require('../assets/buttonImages/search.png')}
-            screen={'Search'}
+            screen={'SearchApparel'}
             navigation={navigation}
 
           />
           <ButtonComp
-            photo={require('../assets/buttonImages/sneaker.png')}
-            screen={'Sneakers'}
+            photo={require('../assets/buttonImages/jacket.png')}
+            screen={'Apparel'}
             navigation={navigation}
           />
           <ButtonComp

@@ -26,7 +26,7 @@ import MainCard from '../components/MainCard';
         <View style={styles.bottomBar}>
           <ButtonComp
           photo = {require('../assets/buttonImages/search.png')}
-          screen={'Search'}
+          screen={'SearchSneakers'}
           navigation={navigation}
           
           />

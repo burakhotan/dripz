@@ -3,7 +3,7 @@ import { View, Text,StyleSheet,Image } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
 //screens
 
-export default class ModalScreen extends Component {
+export default class ModalSneakersScreen extends Component {
 
 
   render() {
@@ -14,7 +14,7 @@ export default class ModalScreen extends Component {
       <View style={styles.header}>
         <ButtonComp
           photo = {require('../assets/buttonImages/goback.png')}
-          screen={'Search'}
+          screen={'SearchSneakers'}
           navigation={navigation}
         >
         </ButtonComp>

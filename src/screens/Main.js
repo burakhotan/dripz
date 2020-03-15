@@ -3,7 +3,7 @@ import { View,StyleSheet,TouchableOpacity,Image } from 'react-native';
 
 //SCREENS
 import Sneakers from './Sneakers';
-import Clothes from './Clothes';
+import Apparel from './Apparel';
 
 export default class Main extends Component {
 
@@ -16,8 +16,8 @@ export default class Main extends Component {
                 <Image source ={require('../assets/buttonImages/sneaker.png')} style={styles.button1}/>
             </TouchableOpacity>
         </View>
-        <View style={styles.clothesContainer}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Clothes')} style={styles.clothesButton}>
+        <View style={styles.apparelContainer}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Apparel')} style={styles.apparelButton}>
                 <Image source ={require('../assets/buttonImages/jacket.png')} style={styles.button2}/>
             </TouchableOpacity>
             
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({ //STYLES
       alignItems:'center'
 
     },
-    clothesContainer:{
+    apparelContainer:{
       flex:0.5,
       backgroundColor:'#000000',
       borderLeftWidth:0.5,
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({ //STYLES
     sneakerButton:{
       
     },
-    clothesButton:{
+    apparelButton:{
 
     },
     button1:{

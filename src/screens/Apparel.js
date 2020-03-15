@@ -5,7 +5,7 @@ import CardComp from '../components/CardComp';
 import MainCard from '../components/MainCard';
 
 
-function ClothesScreen ({navigation}) {
+function ApparelScreen ({navigation}) {
   
   return (
     <SafeAreaView style={styles.container}>
@@ -15,9 +15,9 @@ function ClothesScreen ({navigation}) {
 
       <View style={styles.mainBoard}>
         <MainCard
-          mainCardText={'JORDAN 1 RETRO HIGH TRAVIS SCOTT'}
-          mainSneakerImg={require('../assets/sneakerImages/travis.jpg')}
-          mainPriceText={'$770'}
+          mainCardText={'Nikelab x OFF-WHITE Mercurial NRG X Hoodie Black'}
+          mainSneakerImg={require('../assets/apparelImages/offwhite.jpg')}
+          mainPriceText={'$659'}
         />
         
       </View>
@@ -25,13 +25,13 @@ function ClothesScreen ({navigation}) {
       <View style={styles.bottomBar}>
         <ButtonComp
         photo = {require('../assets/buttonImages/search.png')}
-        screen={'Search'}
+        screen={'SearchApparel'}
         navigation={navigation}
         
         />
         <ButtonComp
-        photo = {require('../assets/buttonImages/sneaker.png')}
-        screen={'Sneakers'}
+        photo = {require('../assets/buttonImages/jacket.png')}
+        screen={'Apparel'}
         navigation={navigation}
         />
         <ButtonComp
@@ -44,7 +44,7 @@ function ClothesScreen ({navigation}) {
     </SafeAreaView>
   );
 }
-export default ClothesScreen;
+export default ApparelScreen;
 
 const styles = StyleSheet.create({ //STYLES
 container: {

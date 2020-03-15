@@ -35,7 +35,7 @@ export default class LoginScreen extends Component {
         <View style={styles.bottomBar}>
           <ButtonComp
           photo = {require('../assets/buttonImages/search.png')}
-          screen={'Search'}
+          screen={'SearchSneakers'}
           navigation={navigation}
           
           />

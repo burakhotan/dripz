@@ -3,13 +3,17 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-//screens
+//screens sneakers
 import SneakersScreen from './screens/Sneakers';
-import SearchScreen from './screens/Search';
-import ModalScreen from './screens/Modal';  
+import SearchSneakersScreen from './screens/SearchSneakers';
+import ModalSneakersScreen from './screens/ModalSneakers';  
 import LoginScreen from './screens/Login';
 import MainScreen from './screens/Main';
-import ClothesScreen from './screens/Clothes';
+
+//screens apparel
+import ApparelScreen from './screens/Apparel';
+import SearchApparelScreen from './screens/SearchApparel';
+import ModalApparelScreen from './screens/ModalApparel';
 
 const Stack = createStackNavigator();
 
@@ -23,12 +27,12 @@ const Stack = createStackNavigator();
                 headerShown:false
             }}
             />
-            <Stack.Screen name= "Search" component={SearchScreen}
+            <Stack.Screen name= "SearchSneakers" component={SearchSneakersScreen}
             options={{
                 headerShown:false
             }}
             />
-            <Stack.Screen name= "Modal" component={ModalScreen}
+            <Stack.Screen name= "ModalSneakers" component={ModalSneakersScreen}
             options={{
                 headerShown:false,
                 
@@ -46,7 +50,19 @@ const Stack = createStackNavigator();
             }}
             
             />
-            <Stack.Screen name= "Clothes" component={ClothesScreen}
+            <Stack.Screen name= "Apparel" component={ApparelScreen}
+            options={{
+                headerShown:false
+            }}
+            
+            />
+            <Stack.Screen name= "SearchApparel" component={SearchApparelScreen}
+            options={{
+                headerShown:false
+            }}
+            
+            />
+            <Stack.Screen name= "ModalApparel" component={ModalApparelScreen}
             options={{
                 headerShown:false
             }}
