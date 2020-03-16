@@ -9,27 +9,28 @@ export default class LoginScreen extends Component {
     return ( 
         <SafeAreaView style={styles.container}>
 
-        <View style={styles.mainBoard}>
-        <View style={styles.usernameBar}>
-          <TextInput
-            placeholder='Username'
-          />
-        </View>
-
-        <View style={styles.passwordBar}>
-            <TextInput
-              placeholder='Password'
-              secureTextEntry={true}  
-            />
+          <View style={styles.mainBoard}>
+            <View style={styles.usernameBar}>
+              <TextInput
+                placeholder='Username'
+              />
           </View>
 
+           <View style={styles.passwordBar}>
+              <TextInput
+                placeholder='Password'
+                secureTextEntry={true}
+                  
+              />
+            </View>
+        </View>
+        <View style={styles.buttonsContainer}>
           <TouchableOpacity style={styles.loginButton}>
             <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.registerButton}>
             <Text style={styles.registerText}>Register</Text>
           </TouchableOpacity>
-          
         </View>
 
         <View style={styles.bottomBar}>
@@ -58,7 +59,7 @@ export default class LoginScreen extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '#FFFFFF',
     },
     bottomBar:{
         backgroundColor:'#000000',
@@ -69,51 +70,61 @@ const styles = StyleSheet.create({
         padding:7
       },
       mainBoard:{
-        flex:0.95,
-        justifyContent:'space-around',
+        flex:0.60,
+        justifyContent: 'center',
+        alignItems: 'center',
      
       },
+      buttonsContainer:{
+        flex:0.35,
+        justifyContent:'flex-start'
+      },
       loginButton:{
-        backgroundColor:'#000000',
-        flexDirection:'row',
-        borderRadius:6,
-        width:100,
-        alignItems:'center',
-        justifyContent:'center',
-        alignSelf:'center'
+        alignSelf: 'stretch',
+        backgroundColor: '#000000',
+        padding: 10,
+        margin:10,
+        marginLeft: 100,
+        marginRight:100,
+        alignItems: 'center',
+        borderRadius:10
       },
       loginText:{
         color:'#FFFFFF',
         fontSize:18,
       },
       registerButton:{
-        backgroundColor:'#000000',
-        flexDirection:'row',
-        borderRadius:6,
-        width:100,
-        alignItems:'center',
-        justifyContent:'center',
-        alignSelf:'center'
+        alignSelf: 'stretch',
+        backgroundColor: '#000000',
+        padding: 10,
+        margin:10,
+        marginLeft: 100,
+        marginRight:100,
+        alignItems: 'center',
+        borderRadius:10
       },
       registerText:{
         color:'#FFFFFF',
         fontSize:18,
       },
       usernameBar: {
-        flex: 0.07,
-        flexDirection:'row',
-        padding: 10,
-        backgroundColor:'#FFFFFF',
-        borderWidth:0.7,
-        borderColor:'#000000',
+        alignSelf: 'stretch',
+        padding:10,
+        marginLeft: 50,
+        margin:5,
+        marginRight:50,
+        borderBottomColor: '#000', // Add this to specify bottom border color
+        borderBottomWidth: 2 
         
       },
       passwordBar: {
-        flex: 0.07,
+        alignSelf: 'stretch',
         padding: 10,
-        backgroundColor:'#FFFFFF',
-        borderWidth:0.7,
-        borderColor:'#000000',
+        marginLeft: 50,
+        margin:5,
+        marginRight:50,
+        borderBottomColor: '#000', // Add this to specify bottom border color
+        borderBottomWidth: 2 
       },
     
   });
