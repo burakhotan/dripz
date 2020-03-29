@@ -14,7 +14,7 @@ export default class ModalSneakersScreen extends Component {
       <View style={styles.header}>
         <ButtonComp
           photo = {require('../assets/buttonImages/goback.png')}
-          screen={'SearchSneakers'}
+          screen={'Sneakers'}
           navigation={navigation}
         >
         </ButtonComp>
@@ -24,7 +24,7 @@ export default class ModalSneakersScreen extends Component {
         <Text style={styles.sneakerNameStyle}>{selectedItem.sneakerName}</Text>
         <Image 
           style={styles.imageStyle}
-          source ={{uri:selectedItem.picture}}/>
+          source ={selectedItem.picture}/>
         <Text style={{fontWeight:'bold'}} > Retail Price:{selectedItem.retailPrice}</Text>
       </View>
     </View>
@@ -41,8 +41,6 @@ const styles = StyleSheet.create({
       height:200,
       borderColor:'#DEDAD1',
       borderWidth:0.5,
-      
-      
     },
     sneakerNameStyle:{
       fontWeight:'bold',

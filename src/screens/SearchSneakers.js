@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity, TextInput } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
-import data from '../data/jordanData';
+import data from '../data/sneakersData';
 import ModalSneakersScreen from './ModalSneakers';
 
 export default class SearchSneakersScreen extends Component {
@@ -20,10 +20,11 @@ export default class SearchSneakersScreen extends Component {
         
         <Image
           style={styles.avatar}
-          source={{ uri: item.picture }}
+          source={ item.picture }
         />
         <View style={styles.textContainer}>
-          <Text style={styles.name} >{item.sneakerName}</Text>
+          <Text style ={styles.brandName}>{item.brandName}</Text>
+          <Text style={styles.sneakerName}>{item.sneakerName}</Text>
         </View>
       </TouchableOpacity>
     )
@@ -113,8 +114,11 @@ const styles = StyleSheet.create({
     borderWidth:0.5,
     borderColor:'#DEDAD1'
   },
-  name: {
+  sneakerName: {
     fontSize: 10
+  },
+  brandName:{
+    
   },
   bottomBar: {
     backgroundColor: '#000000',
@@ -124,16 +128,20 @@ const styles = StyleSheet.create({
     padding: 7,
   },
   searchBar: {
-    flex: 0.07,
-    padding: 10,
+    flex: 0.06,
+    padding: 3,
     backgroundColor:'#FFFFFF',
     borderWidth:0.7,
-    borderColor:'#000000'
+    borderColor:'#909393',
+    borderRadius:10,
+    marginTop: 10,
+    marginBottom:10,
+    
   },
   searchInput: {
-    fontSize: 16
+    fontSize: 13
   },
   searchElements: {
-    flex: 0.88
+    flex: 0.89
   }
 });

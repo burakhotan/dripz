@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, SafeAreaView, FlatList, Image, TouchableOpacity, TextInput } from 'react-native';
 import ButtonComp from '../components/ButtonComp';
-import data from '../data/offWhiteData';
+import data from '../data/apparelData';
 import ModalApparelScreen from './ModalApparel';
 
 export default class SearchApparelScreen extends Component {
@@ -124,16 +124,20 @@ const styles = StyleSheet.create({
     padding: 7,
   },
   searchBar: {
-    flex: 0.07,
-    padding: 10,
+    flex: 0.06,
+    padding: 3,
     backgroundColor:'#FFFFFF',
     borderWidth:0.7,
-    borderColor:'#000000'
+    borderColor:'#909393',
+    borderRadius:10,
+    marginTop: 10,
+    marginBottom:10,
+    
   },
   searchInput: {
     fontSize: 16
   },
   searchElements: {
-    flex: 0.88
+    flex: 0.89
   }
 });

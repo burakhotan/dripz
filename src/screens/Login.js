@@ -29,7 +29,7 @@ export default class LoginScreen extends Component {
             <Text style={styles.loginText}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.registerButton}>
-            <Text style={styles.registerText}>Register</Text>
+            <Text style={styles.registerText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
 
@@ -113,9 +113,8 @@ const styles = StyleSheet.create({
         marginLeft: 50,
         margin:5,
         marginRight:50,
-        borderBottomColor: '#000', // Add this to specify bottom border color
+        borderBottomColor: '#000',
         borderBottomWidth: 2 
-        
       },
       passwordBar: {
         alignSelf: 'stretch',
@@ -123,7 +122,7 @@ const styles = StyleSheet.create({
         marginLeft: 50,
         margin:5,
         marginRight:50,
-        borderBottomColor: '#000', // Add this to specify bottom border color
+        borderBottomColor: '#000', 
         borderBottomWidth: 2 
       },
     

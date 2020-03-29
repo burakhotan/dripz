@@ -1,26 +1,23 @@
 import * as React from 'react';
 import {Platform, StyleSheet, Text, View,Button, TouchableOpacity,Image,SafeAreaView} from 'react-native';
 import ButtonComp from '../components/ButtonComp';
-import CardComp from '../components/CardComp';
-import MainCard from '../components/MainCard';
-
-
-
- function SneakersScreen ({navigation}) {
-  
+import SampleCard from '../components/SampleCard';
+import SearchBarComp from '../components/SearchBarComp';
+ function SneakersScreen ({navigation,screen}) {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container}> 
         <View style={styles.topBar}>
-            <Image source ={require('../assets/logo/dripz_logo_white.png')} style={styles.logoImg}/>
+           <Image source ={require('../assets/logo/dripz_logo_white.png')} style={styles.logoImg}/>
         </View> 
-
+        <View>
+          <SearchBarComp/>
+          <Text style={styles.latestText}>Latest Released</Text>
+        </View>
         <View style={styles.mainBoard}>
-          <MainCard
-            mainCardText={'JORDAN 1 RETRO HIGH TRAVIS SCOTT'}
-            mainSneakerImg={require('../assets/sneakerImages/travis.jpg')}
-            mainPriceText={'$770'}
-          />
           
+          <SampleCard
+          navigation={navigation}
+          />
         </View>
 
         <View style={styles.bottomBar}>
@@ -28,7 +25,6 @@ import MainCard from '../components/MainCard';
           photo = {require('../assets/buttonImages/search.png')}
           screen={'SearchSneakers'}
           navigation={navigation}
-          
           />
           <ButtonComp
           photo = {require('../assets/buttonImages/sneaker.png')}
@@ -61,10 +57,7 @@ const styles = StyleSheet.create({ //STYLES
 
   },
   mainBoard:{
-    flex: 0.85,
-    padding: 10,
-    justifyContent:'center',
-    alignItems:'center'
+    flex: 0.81,
     
   },
   bottomBar:{
@@ -73,14 +66,27 @@ const styles = StyleSheet.create({ //STYLES
     flexDirection:'row' ,
     alignItems:'flex-start',
     justifyContent:'space-around',
-    padding:7
+    padding:7,
+    borderRadius:12,
+    marginHorizontal:50
 
   },
   logoImg:{
     width:150,
     height:150
-    },
-   
-  
-  
+  },
+  welcomeText:{
+    
+  },
+  card:{
+    width:50,
+    height:100,
+    backgroundColor:'#fd3f1e',
+    elevation:20
+  },
+  latestText:{
+    fontSize:20,
+    fontWeight:'bold',
+    paddingHorizontal:10
+  }
 });
